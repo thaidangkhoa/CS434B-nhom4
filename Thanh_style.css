@@ -1,0 +1,267 @@
+/* Reset mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+  background-color: #f5f5f5;
+}
+
+/* Header */
+header {
+  background-color: #111827;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.inner-logo img {
+  height: 50px;
+}
+
+/* Search */
+.inner-search {
+  display: flex;
+  align-items: center;
+  background-color: #1f2937;
+  border-radius: 8px;
+  padding: 5px 10px;
+  width: 40%;
+}
+
+.inner-search input {
+  border: none;
+  background: transparent;
+  outline: none;
+  color: white;
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.inner-search span {
+  color: #9ca3af;
+  padding-left: 8px;
+  font-size: 18px;
+}
+
+/* Button */
+.inner-button button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin-left: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.inner-button button:hover {
+  background-color: #1d4ed8;
+}
+
+/* NAVIGATION MENU */
+nav {
+  background-color: #1f2937;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 5px;
+  transition: color 0.3s;
+}
+
+nav ul li:hover {
+  color: #3b82f6;
+}
+
+/* Gạch dưới khi hover */
+nav ul li::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: #3b82f6;
+  width: 0;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+nav ul li:hover::after {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+  padding: 50px 80px;
+  background-color: #000;
+  color: white;
+}
+
+.inner-desc {
+  flex: 1;
+}
+
+.inner-desc h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.inner-desc p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.inner-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.box {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.box h3 {
+  font-size: 20px;
+  margin: 10px 15px 5px;
+}
+
+.box p {
+  font-size: 14px;
+  margin: 0 15px 10px;
+}
+
+.box a {
+  display: inline-block;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.box a:hover {
+  text-decoration: underline;
+}
+
+/* Trang welcome */
+/* Container chính */
+.inner-content-welcome {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hình ảnh */
+.inner-box-welcome img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease;
+}
+.inner-box-welcome img:hover {
+  transform: scale(1.02);
+}
+
+/* Container nội dung */
+.container-welcome {
+  padding: 0 10px;
+}
+
+/* Tiêu đề */
+.container-welcome h3 {
+  font-size: 24px;
+  color: #e63946;
+  margin: 30px 0 15px;
+  border-left: 5px solid #e63946;
+  padding-left: 12px;
+  text-transform: uppercase;
+}
+
+/* Đoạn văn bản */
+.container-welcome p {
+  font-size: 17px;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Danh sách */
+.container-welcome ul {
+  list-style: disc;
+  padding-left: 25px;
+  margin-bottom: 20px;
+}
+
+.container-welcome ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Nhấn mạnh */
+.container-welcome strong {
+  color: #1d3557;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .inner-content-welcome {
+    padding: 20px;
+  }
+
+  .container-welcome h3 {
+    font-size: 20px;
+  }
+
+  .container-welcome p,
+  .container-welcome ul li {
+    font-size: 15px;
+  }
+}
+/* End trang welcome */
