@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thông Tin Tài Khoản</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="top-bar">
+      <input type="text" placeholder="Tìm kiếm sản phẩm..." class="search-input" />
+      <button class="search-button">🔍</button>
+      <a href="Login.html" class="login-register">ĐĂNG NHẬP/ĐĂNG KÝ</a>
+      <a href="#" class="cart">🛒 GIỎ HÀNG</a>
+    </div>
+    <nav class="nav-bar">
+      <a href="#">TRANG CHỦ</a>
+      <a href="#">GIỚI THIỆU</a>
+      <a href="#">DỊCH VỤ</a>
+      <a href="#">TIN TỨC</a>
+      <a href="#">LIÊN HỆ</a>
+      <a href="#">TƯ VẤN</a>
+    </nav>
+  </header>
+
+  <!-- ACCOUNT INFORMATION -->
+  <div class="account-container">
+    <h2>Thông Tin Tài Khoản</h2>
+    <form action="update_account.php" method="POST">
+      <label for="username">Tên đăng nhập:</label>
+      <input type="text" id="username" value="user123" readonly />
+
+      <label for="name">Họ và Tên:</label>
+      <input type="text" id="name" value="Nguyễn Văn A" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" value="user@example.com" required />
+
+      <label for="phone">Số điện thoại:</label>
+      <input type="tel" id="phone" value="0123456789" required />
+
+      <label for="gender">Giới tính:</label>
+      <select id="gender" required>
+        <option value="nam">Nam</option>
+        <option value="nu">Nữ</option>
+        <option value="khac">Khác</option>
+      </select>
+
+      <label for="dob">Ngày sinh:</label>
+      <input type="date" id="dob" value="1990-01-01" required />
+
+      <button type="submit">Cập Nhật Thông Tin</button>
+    </form>
+  </div>
+
+</body>
+</html>

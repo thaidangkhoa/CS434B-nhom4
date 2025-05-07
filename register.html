@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng Ký</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="top-bar">
+      <input type="text" placeholder="Tìm kiếm sản phẩm..." class="search-input" />
+      <button class="search-button">🔍</button>
+      <a href="Login.html" class="login-register">ĐĂNG NHẬP</a>
+      <a href="#" class="cart">🛒 GIỎ HÀNG</a>
+    </div>
+    <nav class="nav-bar">
+      <a href="#">TRANG CHỦ</a>
+      <a href="#">GIỚI THIỆU</a>
+      <a href="#">DỊCH VỤ</a>
+      <a href="#">TIN TỨC</a>
+      <a href="#">LIÊN HỆ</a>
+      <a href="#">TƯ VẤN</a>
+    </nav>
+  </header>
+
+  <!-- REGISTER FORM -->
+  <div class="register-container">
+    <h2>Đăng Ký</h2>
+
+    <input type="text" placeholder="Tên đăng nhập" required />
+    <input type="tel" placeholder="Số điện thoại" required />
+    <input type="email" placeholder="Email" required />
+
+    <div class="gender-group">
+      <label>Giới tính:</label>
+      <label><input type="radio" name="gender" value="nam" /> Nam</label>
+      <label><input type="radio" name="gender" value="nu" /> Nữ</label>
+      <label><input type="radio" name="gender" value="khac" /> Khác</label>
+    </div>
+    <label>Ngày Sinh:</label>
+    <input type="date" placeholder="Ngày sinh" required />
+
+    <input type="password" placeholder="Mật khẩu" required />
+    <input type="password" placeholder="Xác nhận mật khẩu" required />
+
+    <button>Đăng Ký</button>
+
+    <div class="links">
+      <div>Đã có tài khoản? <a href="Login.html">Đăng Nhập</a></div>
+    </div>
+  </div>
+
+</body>
+</html>
