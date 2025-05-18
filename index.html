@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Shop</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        background-image: url(anh/179-hinh-anh-cho-corgi-con-dep-hoat-hinh-dep-nhat-20231689268697.jpg);
+        background-size: cover;
+      }
+      header {
+        background-color: #fff;
+        padding: 10px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e0e0e0;
+      }
+      .info {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 14px;
+      }
+      .info div {
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+      }
+      .info div i {
+        margin-right: 5px;
+      }
+      nav {
+        background-color: #8dc63f;
+        padding: 10px 50px;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+      }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-weight: bold;
+      }
+      nav ul li a:hover,
+      nav ul li a.active {
+        background-color: #6da82a;
+        border-radius: 5px;
+      }
+      .banner {
+        position: relative;
+        background: url("https://via.placeholder.com/1400x600") center/cover
+          no-repeat;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        padding: 0 50px;
+        color: #fff;
+      }
+      .banner-content {
+        max-width: 500px;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .banner h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+      .banner p {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      .buttons a {
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+      .read-more {
+        background-color: #8dc63f;
+        color: #fff;
+      }
+      .video-btn {
+        background-color: #fff;
+        color: #8dc63f;
+        display: flex;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="info">
+        <div><strong>ĐỊA CHỈ:</strong> 123 Nguyễn Văn Linh, Đà Nẵng, VN</div>
+        <div><strong>EMAIL VN:</strong> Petshop@gmail.com</div>
+        <div><strong>PHONE:</strong> +0768 580 411</div>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#" class="active">TRANG CHỦ</a></li>
+        <li><a href="Login.html">ĐĂNG NHẬP</a></li>
+        <li><a href="#">DỊCH VỤ</a></li>
+        <li><a href="#">CÁC SẢN PHẨM</a></li>
+        <li><a href="#">THÊM</a></li>
+        <li>
+          <a href="#" style="background-color: #6da82a; border-radius: 5px"
+            >LIÊN HỆ →</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <section class="banner">
+      <div class="banner-content">
+        <h1>PET SHOP</h1>
+        <h2>MAKE YOUR PETS HAPPY</h2>
+        <p>
+          Chó, mèo hay bất kỳ các loài động vật khác trong nhà là những loài
+          đáng yêu, gần gũi với con người.
+        </p>
+        <div class="buttons">
+          <a href="#" class="read-more">ĐỌC THÊM</a>
+          <a
+            href="https://www.pexels.com/vi-vn/video/m-t-chu-cho-danh-nhau-v-i-s-ph-n-chi-u-c-a-minh-trong-g-ng-3042473/"
+            class="video-btn"
+            >▶ Xem Video</a
+          >
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
