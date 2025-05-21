@@ -1,0 +1,41 @@
+﻿@model IEnumerable<GymManagement.Models.Package>
+
+@{
+    ViewBag.Title = "Danh sách Gói Tập";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    bool isAdmin = Session["Role"] != null && Session["Role"].ToString() == "Admin";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Danh sách Gói Tập</h2>
+
+    @if (isAdmin)
+    {
+        <div class="text-right mb-3">
+            @Html.ActionLink("Thêm Gói Tập", "Create", "Packages", null, new { @class = "btn btn-success" })
+        </div>
+    }
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">@item.Name</h5>
+                        <p class="card-text"><strong>Giá:</strong> @item.Price VNĐ</p>
+                        <p class="card-text"><strong>Thời hạn:</strong> @item.Duration tháng</p>
+                    </div>
+
+                    @if (isAdmin)
+                    {
+                        <div class="card-footer d-flex justify-content-between">
+                            @Html.ActionLink("Sửa", "Edit", "Packages", new { id = item.Id }, new { @class = "btn btn-sm btn-primary" })
+                            @Html.ActionLink("Xoá", "Delete", "Packages", new { id = item.Id }, new { @class = "btn btn-sm btn-danger" })
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</div>

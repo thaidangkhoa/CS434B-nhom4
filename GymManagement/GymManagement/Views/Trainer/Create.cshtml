@@ -1,0 +1,42 @@
+﻿@model GymManagement.Models.Trainer
+
+@{
+    ViewBag.Title = "Thêm Huấn luyện viên";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4">Thêm Huấn luyện viên mới</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.FullName)
+            @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.FullName, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email)
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email" })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Specialty)
+            @Html.TextBoxFor(m => m.Specialty, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Specialty, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.PhoneNumber)
+            @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-danger" })
+        </div>
+
+        <button type="submit" class="btn btn-success">Lưu</button>
+        @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-secondary ml-2" })
+    }
+</div>

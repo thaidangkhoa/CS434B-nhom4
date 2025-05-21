@@ -1,0 +1,30 @@
+﻿@model GymManagement.Models.Trainer
+
+@{
+    ViewBag.Title = "Chi tiết HLV";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4">Thông tin Huấn luyện viên</h2>
+
+    <dl class="row">
+        <dt class="col-sm-3">Họ tên</dt>
+        <dd class="col-sm-9">@Model.FullName</dd>
+
+        <dt class="col-sm-3">Email</dt>
+        <dd class="col-sm-9">@Model.Email</dd>
+
+        <dt class="col-sm-3">Chuyên môn</dt>
+        <dd class="col-sm-9">@Model.Specialty</dd>
+
+        <dt class="col-sm-3">Số điện thoại</dt>
+        <dd class="col-sm-9">@Model.PhoneNumber</dd>
+
+        <dt class="col-sm-3">Ngày tạo</dt>
+        <dd class="col-sm-9">@Model.CreatedAt.ToString("dd/MM/yyyy")</dd>
+    </dl>
+
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.ID }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-secondary ml-2" })
+</div>

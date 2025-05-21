@@ -1,0 +1,50 @@
+﻿@model GymManagement.Models.TrialRegistration
+
+@{
+    ViewBag.Title = "Đăng ký tập thử";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Đăng ký tập thử</h2>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success text-center">@TempData["Success"]</div>
+    }
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.FullName)
+            @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.FullName, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email)
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Phone)
+            @Html.TextBoxFor(m => m.Phone, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Chọn gói muốn tập thử")
+            @Html.DropDownList("PackageId", null, "-- Chọn gói tập --", new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Notes, "Ghi chú")
+            @Html.TextAreaFor(m => m.Notes, new { @class = "form-control", rows = 3 })
+        </div>
+
+        <button type="submit" class="btn btn-success">Gửi đăng ký</button>
+    }
+</div>

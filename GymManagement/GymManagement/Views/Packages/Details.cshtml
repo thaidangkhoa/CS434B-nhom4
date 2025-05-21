@@ -1,0 +1,24 @@
+﻿@model GymManagement.Models.Package
+
+@{
+    ViewBag.Title = "Chi tiết Gói Tập";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4">Chi tiết Gói Tập</h2>
+
+    <dl class="row">
+        <dt class="col-sm-3">Tên Gói</dt>
+        <dd class="col-sm-9">@Model.Name</dd>
+
+        <dt class="col-sm-3">Giá</dt>
+        <dd class="col-sm-9">@Model.Price VNĐ</dd>
+
+        <dt class="col-sm-3">Thời hạn</dt>
+        <dd class="col-sm-9">@Model.Duration tháng</dd>
+    </dl>
+
+    @Html.ActionLink("Sửa", "Edit", "Packages", new { id = Model.Id }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Quay lại", "Index", "Packages", null, new { @class = "btn btn-secondary ml-2" })
+</div>
